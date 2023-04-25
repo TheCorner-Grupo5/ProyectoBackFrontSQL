@@ -24,7 +24,7 @@ public class Data {
     private String avatar;
 
     public Data(String email, String first_name, String last_name, String avatar) {
-        this.email = email
+        this.email = email;
         this.first_name = first_name;
         this.last_name = last_name;
         this.avatar = avatar;
