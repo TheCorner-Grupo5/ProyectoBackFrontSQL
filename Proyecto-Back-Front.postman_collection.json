@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "830f2ba8-61ff-4bd9-a4df-66ebfae770b9",
+		"name": "Proyecto-Back-Front",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25572879"
+	},
+	"item": [
+		{
+			"name": "JSON-Original",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSON-Creado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/songs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Song",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 100,\r\n    \"email\": \"george.bluth@reqres.in\",\r\n    \"first_name\": \"George\",\r\n    \"last_name\": \"Bluth\",\r\n    \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/addSong",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"addSong"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Song",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/deleteSong?id=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deleteSong"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Song",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 100,\r\n    \"email\": \"2george.bluth@reqres.in\",\r\n    \"first_name\": \"2George\",\r\n    \"last_name\": \"2Bluth\",\r\n    \"avatar\": \"2https://reqres.in/img/faces/1-image.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/updateSong",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"updateSong"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update2-Song",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 100,\r\n    \"email\": \"2george.bluth@reqres.in\",\r\n    \"first_name\": \"2George\",\r\n    \"last_name\": \"2Bluth\",\r\n    \"avatar\": \"2https://reqres.in/img/faces/1-image.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/updateSong2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"updateSong2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
