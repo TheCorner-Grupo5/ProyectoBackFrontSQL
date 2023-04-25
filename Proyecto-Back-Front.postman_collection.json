@@ -32,6 +32,26 @@
 				"method": "GET",
 				"header": [],
 				"url": {
+					"raw": "http://localhost:8080/api/JSON-Songs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"JSON-Songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Songs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
 					"raw": "http://localhost:8080/api/songs",
 					"protocol": "http",
 					"host": [
@@ -53,7 +73,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 100,\r\n    \"email\": \"george.bluth@reqres.in\",\r\n    \"first_name\": \"George\",\r\n    \"last_name\": \"Bluth\",\r\n    \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n}",
+					"raw": "{\r\n    \"id\": 200,\r\n    \"email\": \"george.bluth@reqres.in\",\r\n    \"first_name\": \"Natalie\",\r\n    \"last_name\": \"Bluth\",\r\n    \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -125,35 +145,6 @@
 					"path": [
 						"api",
 						"updateSong"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update2-Song",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"id\": 100,\r\n    \"email\": \"2george.bluth@reqres.in\",\r\n    \"first_name\": \"2George\",\r\n    \"last_name\": \"2Bluth\",\r\n    \"avatar\": \"2https://reqres.in/img/faces/1-image.jpg\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/updateSong2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"updateSong2"
 					]
 				}
 			},
