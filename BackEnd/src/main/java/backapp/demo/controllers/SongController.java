@@ -63,17 +63,32 @@ public class SongController {
         }
     }
     
-    // @DeleteMapping("/deleteSong")
-    // public Data deleteSong(@RequestParam int id) {
-    //     dataRepository.delete(dataRepository.findById(id));
-    //     return data;
-    // }
+    @DeleteMapping("/deleteSong")
+    public Data deleteSong(@RequestParam int id) {
+        Data data = dataRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
+        dataRepository.delete(data);
+        return data;
+    }
 
-    // @PutMapping("/updateSong")
-    // public Data updateSong(@RequestBody Data data) {
-
-    //     return dataToUpdate;
-    // }
+    @PutMapping("/updateSong")
+    public Data updateSong(@RequestBody Data data) {
+        Data dataToUpdate = dataRepository.findById(data.getId())
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
+        if (data.getFirst_name() != null) {
+            dataToUpdate.setFirst_name(data.getFirst_name());
+        }
+        if (data.getLast_name() != null) {
+            dataToUpdate.setLast_name(data.getLast_name());
+        }
+        if (data.getEmail() != null) {
+            dataToUpdate.setEmail(data.getEmail());
+        }
+        if (data.getAvatar() != null) {
+            dataToUpdate.setAvatar(data.getAvatar());
+        }
+        return dataRepository.save(dataToUpdate);
+    }
 
   
 

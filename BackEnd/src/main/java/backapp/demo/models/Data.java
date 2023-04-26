@@ -30,6 +30,9 @@ public class Data {
         this.avatar = avatar;
     }
 
-
-	
+    @Override
+    public boolean equals(Object object) {
+        Data data = (Data) object;
+        return email.equals(data.email) && first_name.equals(data.first_name) && last_name.equals(data.last_name) && avatar.equals(data.avatar);
+    }
 }
