@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import backapp.demo.models.Data;
+import backapp.demo.models.User;
 import backapp.demo.repositories.UserRepository;
 
 
@@ -28,51 +29,49 @@ public class UserController {
 
 
     @GetMapping("/users")
-    public List<Data> getAllUsers(){
+    public List<User> getAllUsers(){
         return userRepository.findAll();
     }
 
 
-    @PostMapping("/addSong")
-    public Data addSong(@RequestBody Data data) {
+    @PostMapping("/addUser")
+    public User addUser(@RequestBody User user) {
         int counter = 0;
-        for(Data dt: getAllSongs()){
-            if(dt.equals(data)){
-                counter++;
-            }
-        }
+        // for(User dt: getAllUsers()){
+        //     if(dt.equals(user)){
+        //         counter++;
+        //     }
+        // }
         if (counter > 0) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The element already exists in the repository");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The user already exists in the repository");
         } else {
-            return dataRepository.save(data);
+            return userRepository.save(user);
         }
     }
     
-    @DeleteMapping("/deleteSong")
-    public Data deleteSong(@RequestParam int id) {
-        Data data = dataRepository.findById(id)
+    @DeleteMapping("/deleteUser")
+    public User deleteSong(@RequestParam int id) {
+        User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
-        dataRepository.delete(data);
-        return data;
+        userRepository.delete(user);
+        return user;
     }
 
-    @PutMapping("/updateSong")
-    public Data updateSong(@RequestBody Data data) {
-        Data dataToUpdate = dataRepository.findById(data.getId())
+    @PutMapping("/updateUser")
+    public User updateUser(@RequestBody User user) {
+        User userToUpdate = userRepository.findById(user.getId())
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
-        if (data.getFirst_name() != null) {
-            dataToUpdate.setFirst_name(data.getFirst_name());
+        if (user.getFirstName() != null) {
+            userToUpdate.setFirstName(user.getFirstName());
         }
-        if (data.getLast_name() != null) {
-            dataToUpdate.setLast_name(data.getLast_name());
+        if (user.getLastName() != null) {
+            userToUpdate.setLastName(user.getLastName());
         }
-        if (data.getEmail() != null) {
-            dataToUpdate.setEmail(data.getEmail());
+        if (user.getEmail() != null) {
+            userToUpdate.setEmail(user.getEmail());
         }
-        if (data.getAvatar() != null) {
-            dataToUpdate.setAvatar(data.getAvatar());
-        }
-        return dataRepository.save(dataToUpdate);
+ 
+        return userRepository.save(userToUpdate);
     }
 
   

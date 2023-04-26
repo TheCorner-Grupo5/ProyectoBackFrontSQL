@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "830f2ba8-61ff-4bd9-a4df-66ebfae770b9",
+		"_postman_id": "40bc86aa-e209-4c35-bb34-d146a9115476",
 		"name": "Proyecto-Back-Front",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "25572879"
+		"_exporter_id": "26846438"
 	},
 	"item": [
 		{
@@ -73,7 +73,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 200,\r\n    \"email\": \"george.bluth@reqres.in\",\r\n    \"first_name\": \"Natalie\",\r\n    \"last_name\": \"Bluth\",\r\n    \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n}",
+					"raw": "{\r\n    \"email\": \"george.bluth@reqres.in\",\r\n    \"first_name\": \"Natalie\",\r\n    \"last_name\": \"Bluth\",\r\n    \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -145,6 +145,108 @@
 					"path": [
 						"api",
 						"updateSong"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"firstName\": \"natalie2\",\r\n        \"lastName\": \"gomez2\",\r\n        \"email\": \"ngomez.cep@gmail.com2\",\r\n        \"password\": \"123456782\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"firstName\": \"natalie2\",\r\n        \"lastName\": \"gomez2\",\r\n        \"email\": \"ngomez.cep@gmail.com2\",\r\n        \"password\": \"123456782\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/deleteUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deleteUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update - User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"email\": \"2george.bluth@reqres.in\",\r\n    \"first_name\": \"2George\",\r\n    \"last_name\": \"2Bluth\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"updateUser"
 					]
 				}
 			},
