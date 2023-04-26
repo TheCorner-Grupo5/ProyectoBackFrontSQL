@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import backapp.demo.models.Data;
 import backapp.demo.models.User;
 import backapp.demo.repositories.UserRepository;
 
@@ -36,13 +35,7 @@ public class UserController {
 
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user) {
-        int counter = 0;
-        // for(User dt: getAllUsers()){
-        //     if(dt.equals(user)){
-        //         counter++;
-        //     }
-        // }
-        if (counter > 0) {
+        if (userRepository.existsByEmail(user.getEmail())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The user already exists in the repository");
         } else {
             return userRepository.save(user);

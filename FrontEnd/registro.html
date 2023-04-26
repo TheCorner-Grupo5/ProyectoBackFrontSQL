@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="YourlyricsMusic Contacto.">
+	<title>Contacto</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<style>
+		*{
+		margin:0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		font-family: 'Playfair Display', serif; /*"Noto Naskh Arabic UI", Arial, sans-serif;*/
+		background-color:rgb(4, 65, 71); 
+		background-image: url(img/star.png); 
+		text-align: left;
+		background-size: 50px, cover ;
+		background-position: 20px 10px, top;
+		background-repeat: no-repeat;
+	}
+	h2{
+		font-weight: 500;
+		font-size: 40px;
+		border-bottom: 1px solid white;
+		width: 330px;
+		margin: auto;
+		padding: 10px;
+	}
+	h2 {
+		text-decoration: none;
+		color:white;
+		}
+		h2:hover{
+        text-decoration: underline;
+        color:white;
+		}
+		 a{
+      text-decoration: none;
+		color: white;
+    }
+    a:hover{
+        text-decoration: underline;
+        color:red;
+    }	
+    .info{
+			color: white;
+    }
+		span{
+		color: rgba(202, 7, 7, 0.856);
+		font-size: 60px;
+	}
+	.social {
+		position: fixed;
+		bottom: 120px;
+		right: 10px;
+		z-index: 10;
+		text-align: center;
+		padding: 5px;
+		width: 40px;
+}
+.social a {
+		display: block;
+		margin-bottom: 10px;
+		color: white;
+		padding: 5px;
+		font-size: 30px;
+		text-decoration: none;
+}
+.formular, h1,h2,h5,p {
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+em{
+			color: red;
+		}
+.card-text, p {
+    font-size:18px ;
+    text-align:justify ;  
+}
+input {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25), 0 15px 15px rgba(0,0,0,0.22);
+}
+input[type]:hover, textarea:hover {
+    border: 2px solid rgba(202, 7, 7, 0.856);
+}
+input[type]:focus,textarea:hover {
+    border: 2px solid rgba(202, 7, 7, 0.856);
+    outline: none;
+}
+label {
+    cursor: default;
+		}
+button[type="submit"]{
+    width: initial;
+    padding: 5px 25px;
+		background-color:rgba(202, 7, 7, 0.856); 
+    color: white;
+    font-weight: 500;
+}
+button[type="submit"]:hover {
+    color: black;
+    background-color:blue;
+    transition: .5s;
+}
+.formular{
+	padding: 10px;
+ 	/*width: 40%;*/
+}
+button {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25), 0 15px 15px rgba(0,0,0,0.22);
+}
+footer{
+	text-align: center;
+	color: white;
+	padding:40px;
+}
+.general{
+	display: flex;
+}
+.formular,.mapa{
+	flex: 400px 1 1;
+	margin:60px;
+	line-height: 1.3;
+}
+.mapa{
+	margin-top:170px;
+}
+</style>
+</head>
+<body>
+	<h2><a href="index.html"><span>&#x1d11e;</span>YourlyricsMusic</a></h2>
+<header>
+<div class="general">
+	<div class="formular">
+			<h1>Registrate</h1>
+			
+			<form method="post" action="/addUser" class="row g-3">
+
+                <div class="col-12">
+					<label for="firstName" class="form-label">Nombre<em>*</em> </label>
+					<input type="text" class="form-control" id="inputAddress" name="firstName"  required >
+				</div>
+                <div class="col-12">
+					<label for="lastName" class="form-label">Apellidos<em>*</em> </label>
+					<input type="text" class="form-control" id="inputAddress"  name="lastName" required >
+				</div>
+				<div class="col-md-6">
+					<label for="email" class="form-label">Email<em>*</em></label>
+					<input type="email" class="form-control" id="inputEmail4" name="email"  required>
+				</div>
+				<div class="col-md-6">
+					<label for="password" class="form-label">Contrasena<em>*</em></label>
+					<input type="password" class="form-control" id="inputPassword4" name="password" required>
+				</div>
+
+                <!-- <div class="col-md-6">
+					<label for="inputPassword4" class="form-label">Contrasena <em>*</em></label>
+					<input type="password" class="form-control" id="inputPassword4"  required>
+				</div> -->
+
+					<div class="col-12">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="gridCheck" required >
+						<label class="form-check-label" for="gridCheck">Check me out (obligatorio)<em>*</em>
+						</label>
+					</div>
+				</div>
+				<div class="col-12">
+					<button type="submit" class="btn btn-primary">Enviar</button>
+				</div>
+			</form>
+		</div>
+
+</div>
+</header>
+<div class="social">
+	<a href="https://facebook.com/YourlyricsMusic" aria-label="icono"><i class="fa fa-facebook"></i></a>
+	<a href="https://instagram.com/YourlyricsMusic"aria-label="icono" ><i class="fa fa-instagram"></i></a>
+	<a href="https://twitter.com/YourlyricsMusic" aria-label="icono" ><i class="fa fa-twitter"></i></a>
+	<a href="https://telegram.com/YourlyricsMusic"aria-label="icono" ><i class="fa fa-telegram"></i></a>
+	<a href="https://youtube.com/YourlyricsMusic" aria-label="icono" ><i class="fa fa-youtube"></i></a>
+	</div>
+<footer>
+	<small>Todos los derechos  &copy; Copiright | 2023 Yourlyrics |<a class="infor" href="tel:+34333666999">+34333666999 </a><a class="infor" href="mailto:info@Yourlyrics.com">-info@Yourlyrics.com</a> | 
+				Aviso legal | Privacidad Carrer Vicenç Llivina, 14368</small>
+</footer>
+</body>
+</html>
