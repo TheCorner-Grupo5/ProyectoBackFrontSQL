@@ -20,17 +20,19 @@ public class User {
   private String firstName;
   private String lastName;
   private String email;
+  private String password;
 
-  public User(String firstName,String lastName, String email){
+  public User(String firstName,String lastName, String email,String password){
     this.firstName=firstName;
     this.lastName=lastName;
     this.email=email;
+    this.password=password;
   }
 
   @Override
   public boolean equals(Object object) {
     User user = (User) object;
-    return firstName.equals(user.firstName) && lastName.equals(user.lastName)&&email.equals(user.email) ;
+    return firstName.equals(user.firstName) && lastName.equals(user.lastName)&&email.equals(user.email)&& password.equals(user.password) ;
   }
 
 
