@@ -50,13 +50,7 @@ public class SongController {
 
     @PostMapping("/addSong")
     public Data addSong(@RequestBody Data data) {
-        int counter = 0;
-        for(Data dt: getAllSongs()){
-            if(dt.equals(data)){
-                counter++;
-            }
-        }
-        if (counter > 0) {
+        if (dataRepository.existsByEmail(data.getEmail())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The element already exists in the repository");
         } else {
             return dataRepository.save(data);
