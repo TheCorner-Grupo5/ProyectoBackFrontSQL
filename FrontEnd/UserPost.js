@@ -20,10 +20,8 @@ form.addEventListener('submit', function(event) {
 	.then(response => response.json())
 	.then(data => {
 		console.log('Success:', data);
-		// Here you can add code to display a success message to the user
 	})
 	.catch((error) => {
 		console.error('Error:', error);
-		// Here you can add code to display an error message to the user
 	});
 });
