@@ -16,7 +16,7 @@ window.onload = function () {
         const card = document.createElement("div");
         card.className = "col";
         let p1 = document.createElement("p")
-        p1.innerText = json.data[i].id  + " - "+ json.data[i].email + " - "+ json.data[i].first_name  + " - "+  json.data[i].last_name + " - "+ json.data[i].avatar;
+        p1.innerText = json.data[i].id  +  " - "+ json.data[i].firstName  + " - "+  json.data[i].lastName +" - "+ json.data[i].email;
         card.appendChild(p1);
         let i1 = document.createElement("img");
         i1.src = json.data[i].avatar;

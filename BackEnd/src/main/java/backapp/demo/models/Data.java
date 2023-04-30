@@ -18,21 +18,17 @@ public class Data {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
+    private String firstName;
+    private String lastName;
     private String email;
-    private String first_name;
-    private String last_name;
     private String avatar;
 
-    public Data(String email, String first_name, String last_name, String avatar) {
+    public Data(String firstName, String lastName,String email, String avatar) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
-        this.first_name = first_name;
-        this.last_name = last_name;
         this.avatar = avatar;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        Data data = (Data) object;
-        return email.equals(data.email) && first_name.equals(data.first_name) && last_name.equals(data.last_name) && avatar.equals(data.avatar);
-    }
+
 }

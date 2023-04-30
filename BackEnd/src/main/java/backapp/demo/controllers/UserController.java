@@ -3,9 +3,7 @@ package backapp.demo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,20 +34,18 @@ public class UserController {
 
 
     @PostMapping("/addUser")
-    public ResponseEntity<User> addUser(@RequestBody User user) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "*"); 
+    public User addUser(@RequestBody User user) {
         if (userRepository.existsByEmail(user.getEmail())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The user already exists in the repository");
         } else {
-            return new ResponseEntity<User>(userRepository.save(user), headers, HttpStatus.CREATED);
+            return userRepository.saveAndFlush(user);
         }
     }
     
     @DeleteMapping("/deleteUser")
     public User deleteSong(@RequestParam int id) {
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
         userRepository.delete(user);
         return user;
     }
@@ -57,7 +53,7 @@ public class UserController {
     @PutMapping("/updateUser")
     public User updateUser(@RequestBody User user) {
         User userToUpdate = userRepository.findById(user.getId())
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
         if (user.getFirstName() != null) {
             userToUpdate.setFirstName(user.getFirstName());
         }
