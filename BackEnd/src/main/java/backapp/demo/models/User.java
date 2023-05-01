@@ -29,11 +29,6 @@ public class User {
     this.password=password;
   }
 
-  @Override
-  public boolean equals(Object object) {
-    User user = (User) object;
-    return firstName.equals(user.firstName) && lastName.equals(user.lastName)&&email.equals(user.email)&& password.equals(user.password) ;
-  }
 
 
 }

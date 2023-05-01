@@ -3,9 +3,8 @@ package backapp.demo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,27 +21,39 @@ import backapp.demo.models.Support;
 import backapp.demo.repositories.DataRepository;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class SongController {
     @Autowired
     private DataRepository dataRepository;
 
    
-    @GetMapping("/JSON-Songs")
-    public ResponseEntity<Response> getJSONSongs() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "*"); 
+    // @GetMapping("/JSON-Songs")
+    // public ResponseEntity<Response> getJSONSongs() {
+    //     HttpHeaders headers = new HttpHeaders();
+    //     headers.add("Access-Control-Allow-Origin", "*"); 
 
+    //     Response response = new Response(1, 6, 12, 2);
+    //     Support support = new Support("https://reqres.in/#support-heading", 
+    //     "To keep ReqRes free, contributions towards server costs are appreciated!");
+    //     response.setSupport(support);
+    //     response.setData(dataRepository.findAll());
+
+    //     return new ResponseEntity<>(response, headers, HttpStatus.OK);
+    // }
+
+    @GetMapping("/JSON-Songs")
+    public Response getJSONSongs() {
         Response response = new Response(1, 6, 12, 2);
         Support support = new Support("https://reqres.in/#support-heading", 
         "To keep ReqRes free, contributions towards server costs are appreciated!");
         response.setSupport(support);
         response.setData(dataRepository.findAll());
 
-        return new ResponseEntity<>(response, headers, HttpStatus.OK);
+        return response;
     }
 
-    @GetMapping("/songs")
+    @GetMapping("/getSongs")
     public List<Data> getAllSongs(){
         return dataRepository.findAll();
     }
@@ -69,11 +80,11 @@ public class SongController {
     public Data updateSong(@RequestBody Data data) {
         Data dataToUpdate = dataRepository.findById(data.getId())
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
-        if (data.getFirst_name() != null) {
-            dataToUpdate.setFirst_name(data.getFirst_name());
+        if (data.getFirstName() != null) {
+            dataToUpdate.setFirstName(data.getFirstName());
         }
-        if (data.getLast_name() != null) {
-            dataToUpdate.setLast_name(data.getLast_name());
+        if (data.getLastName() != null) {
+            dataToUpdate.setLastName(data.getLastName());
         }
         if (data.getEmail() != null) {
             dataToUpdate.setEmail(data.getEmail());

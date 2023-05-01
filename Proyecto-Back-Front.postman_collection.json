@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "40bc86aa-e209-4c35-bb34-d146a9115476",
+		"_postman_id": "aecdc801-7df6-49a2-bd96-62835702b703",
 		"name": "Proyecto-Back-Front",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26846438"
+		"_exporter_id": "25572879"
 	},
 	"item": [
 		{
@@ -151,6 +151,26 @@
 			"response": []
 		},
 		{
+			"name": "Get-User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Add-User",
 			"request": {
 				"method": "POST",
@@ -174,26 +194,6 @@
 					"path": [
 						"api",
 						"addUser"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get-User",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/users",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"users"
 					]
 				}
 			},

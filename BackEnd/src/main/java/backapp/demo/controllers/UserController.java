@@ -20,16 +20,15 @@ import backapp.demo.repositories.UserRepository;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://127.0.0.1:5500")
-
 
 public class UserController {
     @Autowired
     private UserRepository userRepository;
 
 
-    @GetMapping("/users")
+    @GetMapping("/getUsers")
     public List<User> getAllUsers(){
         return userRepository.findAll();
     }
@@ -47,7 +46,7 @@ public class UserController {
     @DeleteMapping("/deleteUser")
     public User deleteSong(@RequestParam int id) {
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
         userRepository.delete(user);
         return user;
     }
@@ -55,7 +54,7 @@ public class UserController {
     @PutMapping("/updateUser")
     public User updateUser(@RequestBody User user) {
         User userToUpdate = userRepository.findById(user.getId())
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Song not found"));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
         if (user.getFirstName() != null) {
             userToUpdate.setFirstName(user.getFirstName());
         }
