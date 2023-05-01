@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 400px;
+    padding-bottom: 60px;
+    border-radius: 5px;
+}
+
+body {
+    font-family: 'Playfair Display', serif; /*"Noto Naskh Arabic UI", Arial, sans-serif;*/
+    background-color: rgb(4, 65, 71);
+    background-image: url(img/star.png);
+    text-align: left;
+    background-size: 50px, cover;
+    background-position: 20px 10px, top;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 40px;
+    border-bottom: 1px solid white;
+    width: 330px;
+    margin: auto;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.info {
+    color: white;
+}
+
+span {
+    color: rgba(202, 7, 7, 0.856);
+    font-size: 60px;
+}
+
+p {
+    font-size: 18px;
+    text-align: unset;
+    color: darkgrey;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 40px;
+    padding-left: 0;
+}
+
+#start {
+    padding: 40px;
+    margin-top: 30px;
+}

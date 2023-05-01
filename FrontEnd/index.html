@@ -1,305 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="YourlyricsMusic.">
-<title>Yourlyrics</title>
-	<link rel="icon" type="image/png" href="img/favicon.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	
-	<style>
-	@font-face {
-		font-family: segram;
-		src: url("img/segram.ttf");
-		}
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		body {
-			font-family:  'Playfair Display', serif;  /*"Noto Naskh Arabic UI", Arial, sans-serif;*/
-		}
-		h1{
-			font-family: 'segram';
-			font-weight: 500;
-			font-size: 60px;
-			border-bottom: 1px solid white;
-			width: 300px;    /*border */
-			margin: auto;
-			margin-bottom: 20px;
-			padding: 10px 0;
-		}
-		h2{
-			font-family: 'Playfair Display', serif;
-			font-weight: 500;
-			font-size:40px ;
-			text-align: center;
-		}
-		h4{
-			color: darkgrey;
-		}
-		header {
-			text-align: center;
-			padding: 150px 50px;
-			position: relative;
-			color:white;
-			background-color: rgba(0,0,0,.3);
-			overflow: hidden;
-		}
-		header .frases {
-			margin-bottom: 10px;
-			position: absolute;
-			bottom: 30px;
-			box-shadow: 0 15px 30px rgba(0,0,0,0.25), 0 15px 15px rgba(0,0,0,0.22);
-			color: white;
-			font-size: 16px;
-			text-align: center;
-		} 
-		header video {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			z-index: -10;
-			min-height: 100%;
-			min-width: 100%;
-		}
-		body{
-			background-color: rgb(4, 65, 71);
-			color:white ;
-		}
-		svg {
-			color: rgba(202, 7, 7, 0.856);;
-		}
-		.container-fluid{
-			left: 80px;
-			position: relative;
-		}
-		.navbar-inverse{
-			position: absolute;
-			right: 0;
-			left: 0;
-			top: 0;
-			background-color: rgb(4, 65, 71);
-			background-image: url(img/star.png); 
-			text-align: left;
-			background-size: 40px, cover ;
-			background-position: 15px, top;
-			background-repeat: no-repeat;
-		}
-		.form-control{
-			margin-left: 460px;
-			
-		}
-		.btn-primary {
-			background-color: rgba(202, 7, 7, 0.856);
-			margin-left: 75px;
-			width: 100px;
-		}
-		.container{
-			padding-bottom:20px ;
-		}
-		.container h3{
-			text-align: center;
-		}
-		.uno h2{
-			font-size: 2.2rem;
-			text-align: center;
-		}
-		.uno > article{
-			padding: 20px;
-		}
-		.uno{
-			text-align: center;
-		}
-		#mus{
-			border-radius: 5px;
-			
-		}
-		#mus:hover {
-		 	opacity: 1;
-		 	transition: .5s;
-		 	transform: scale(1.1);
-		}
-		.container img{
-			opacity: 0.8;
-		}
-		.container img:hover{
-			opacity: 1;
-		 	transition: .5s;
-		 	transform: scale(1.1);
-		}
-		.dva, .dva1{
-			margin: 40px;
-			line-height: 1.3;
-		}
-		.uno{
-			display: flex;
-		}
-		.dva,.dva1{
-			flex: 400px 1 1;
-		}
-		footer{
-			text-align: center;
-			color: white;
-			padding:40px;
-		}
-	
-			a{
-      text-decoration: none;
-			color:white;
-    }
-    a:hover{
-        text-decoration: underline;
-        color:red;
-    }	
-    .info{
-        font-size: 14px;
-    }
-		.mb-5 img{
-			border-radius: 5px;
-			padding-inline:15px;
-		}	
-		.tres {
-			text-align: center;
-			background-color: black;
-			padding: 20px;
-		}
-		.tres h3 {
-		color:darkgrey
-		}
-		.tres img{
-			opacity: 0.8;
-		}
-		.tres img:hover{
-			opacity: 1;
-		 	transition: .5s;
-		 	transform: scale(1.1);
-		}
-		</style>
-</head>
-<body>
-	<header>
-		<section id="barr">
-			<nav class=" navbar navbar-inverse">
-				<div class="container-fluid">
-						<div class="row">
-								<div class="navbar-header">
-									<a class="navbar-brand" href="galeria.html"> Yourlyrics!</a>
-								<ul class="nav navbar-nav" >
-										<li class="active"><a href="index.html">Inicio</a></li>
-										<li ><a href="galeria.html">Galeria</a></li>
-										<li><a href="index1.html">Contacto</a></li>
-								</ul>
-								<form class="navbar-form navbar-left" action="/action_page.php">
-										<input class="form-control" type="text" aria-label="Search">
-										<button type="submit" class="btn btn-default" >Buscar</button>
-								</form>
-							</div>
-						</div>
-				</div>
-			</nav>
-	</section>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YourlyricsMusic." />
+    <title>Yourlyrics</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <section id="barr">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html"> Yourlyrics!</a>
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="../index.html">Inicio</a></li>
+                  <li><a href="html/galeria.html">Galeria</a></li>
+                  <li><a href="html/formularioContacto.html">Contacto</a></li>
+                  <li class="dropdown">
+                  <div >
+                    <button class="dropbtn">Panel de control</button>
+                    <ul class="dropdown-content">
+                      <li ><a href="/html/SongPut.html" id="list">Actualizar cancion</a></li>
+                      <li><a href="/html/SongDelete.html"  id="list" >Borrar Cancion</a></li>
+                      <li ><a href="/html/UserPut.html" id="list">Actualizar usuario</a></li>
+                      <li><a href="/html/UserDelete.html"  id="list" >Borrar usuario</a></li>
+                    </ul>
+                  </div>
+                </li>
+                  
+                  
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                  <input class="form-control" type="text" aria-label="Search" />
+                  <button type="submit" class="btn btn-default">Buscar</button>
+                </form>
+              
+                  <button><a href="/html/UserPost.html">Registrate</a></button>
+                  <button><a href="#"></a>Iniciar Sesión</button>
+                
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
 
-<div class="frases">
-			<script>
-				let frases = ["Para el sabio, la tristeza y la alegría son semejantes, lo mismo que el bien y el mal, para el sabio, todo lo que tuvo principio debe tener también fin. Considera, por tanto, si hay razón para que te alegres con la ventura que llega, o te entristezcas con la desgracia que no esperabas." , "Vive plenamente mientras puedas y no calcules el precio." , "No te ilusiones con tu riqueza y tu belleza, puedes perderlas; aquella en una noche, esta en una fiebre." , "A nadie pedí la vida. Me esfuerzo por aceptar, sin júbilo ni rabia, todo lo que la vida ofrece. Partiré sin preguntar al prójimo acerca de mi curiosa permanenciaen este mundo." , "Entre la fe y la incredulidad, un soplo. Entre la certeza y la duda, un soplo. Alégrate en este soplo presente donde vives, pues la vida mismaestáen el soplo que pasa." , "¡Qué mezquino el corazón que no sabe amar! Si no estás enamorado, ¿cómo puedes gozar con la deslumbrante luz del sol o la suave claridad de la luna?" , "Los sabios no podrán enseñarte nunca nada, mas la caricia de unas negras pestañas de mujer te revelará la felicidad." , "Si los amantes del vino y del amor van al infierno, vacío debe estar el paraíso." , "A pesar de la felicidad que tuvimos, no adoro el pasado. ¡ Es tan honda la dulzura del presente!" , "Lámparas que se apagan, esperanzas que se encienden: la aurora. Lámparas que se encienden, esperanzas que se apagan: la noche.","Así es como funciona: pones tu canción favorita en la alarma... y no más canción favorita…"];
-				let aleatorio = parseInt(Math.random()*frases.length);
-				document.write(frases[aleatorio]);
-			</script>
-		</div>
-		<video src="img/portada.mp4" autoplay muted loop></video>
-		<h1>MUSIC</h1>
-		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-collection-play" viewBox="0 0 16 16">
-			<path d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1zm2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848l-4-2.5z"/>
-			<path d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5h13z"/>
-		</svg>
-		<h2>Bienvenido a YourlyricsMusic!</h2>
-		</header>
-			<div class="container">
-				<h2>Elige la canción que te gusta</h2>
-				<br>
-				<section class="mb-5">
-				<div class="row">
-						<article class="col-12 col-sm-6 col-sm-3">
-						<figure>
-							<a href="img/img12.jpg" target="_blank"><img src="img/img12.jpg" alt=" foto de Guitarrista" width="260px" height="200px" title="Guitarrista y tamborilero"></a>
-						</figure>
-						<br>
-						<button type="button" class="btn btn-primary">Más info</button>
-						</article>
-						<article class="col-12 col-sm-6 col-sm-3">
-						<figure>
-								<a href="img/img10.jpg" target="_blank"><img src="img/img10.jpg" alt=" foto audencia banda" width="260px" height="200px" title="Audencia banda"></a>
-							</figure>
-							<br>
-							<button type="button" class="btn btn-primary">Más info</button>
-						</article>
-						<article class="col-12 col-sm-6 col-sm-3">
-						<figure>
-								<a href="img/img11.jpg" target="_blank"><img src="img/img11.jpg" alt="foto luz musica" width="260px" height="200px" title="Luz musica"></a>
-							</figure>
-							<br>
-							<button type="button" class="btn btn-primary">Más info</button>
-						</article>
-						<article class="col-12 col-sm-6 col-sm-3">
-						<figure>
-							<a href="img/img7.jpg" target="_blank"><img src="img/img7.jpg" alt=" foto artista musico" width="260px" height="200px" title="Artista musico"></a>
-						</figure>
-							<br>
-						<button type="button" class="btn btn-primary">Más info</button>
-						</article>
-					</div>
-				</section>
-			</div> 
-				<img class="foto" src="img/img4.jpg" alt="foto de concierto" width="100%">
-				<div class="tres">
-					<div class="row">
-						<article class="col-12 col-sm-6 col-md-4">
-							<img src="img/img1.png" alt="boton1">
-							<h2>Escucha en segundo plano</h2>
-							<h3>Olvídate de que tu música se detenga cuando bloqueas la pantalla o utilizas otras aplicaciones.</h3>
-						</article>
-						<article class="col-12 col-sm-6 col-md-4">
-							<img src="img/img2.png" alt="boton2">
-							<h2>Música sin anuncios</h2>
-							<h3>Disfruta de todo un mundo de música sin anuncios.</h3>
-						</article>
-						<article class="col-12 col-sm-6 col-md-4">
-						<img src="img/img3.png" alt="boton3">
-							<h2>Descarga y disfruta</h2>
-							<h3>Escucha a tus artistas favoritos durante un vuelo, en el metro o incluso cuando no tengas conexión.</h3>
-						</article>
-					</div>
-				</div>
-				<section class="uno">
-				<article class="dva">
-					<h4>Cantar una canción es darle vida.</h4>
-					<h2>Las Canciones nacen de la vida, no de tocar el piano.</h2>
-					<br>
-			<figure>
-						<a href="img/img3.jpg" target="_blank"><img  id="mus" src="img/img3.jpg" alt="Guitarra"width="100%" title="Musico guetarra cancion"></a>
-					</figure>
-					<h3>La canción habla del alma del hombre. Una canción no es solo un llamado a la acción y no es una razón para bailar. La canción expresa la visión personal de una persona del mundo.</h3>
-				</article>
-				<article class="dva1">
-					<h4>Quien posee los encantos de las Canciones, posee el alma de cualquiera.</h4>
-					<h2>Sin una canción no hay vida, como no hay vida sin el sol.</h2>
-					<br>
-				<figure>
-						<a href="img/img.jpg" target="_blank"><img id="mus"  src="img/img.jpg" alt="foto fans en concierto" width="100%" title="Fans en concierto"></a>
-					</figure>
-					<h3>Las Canciones y los poemas están hechos del mismo material que las almas; penetran de un mundo a otro casi sin obstáculos.</h3>
-				</article>
-			</section>
-			<footer>
-				<small>Todos los derechos  &copy; Copiright | 2023 Yourlyrics |<a class="info" href="tel:+34333666999">34333666999 </a><a class="info" href="mailto:info@Yourlyrics.com">- info@Yourlyrics.com</a> | 
-					Aviso legal | Privacidad Carrer Vicenç Llivina, 14368</small>
-				</footer>
-</body>
+      <div class="frases">
+        <script>
+          let frases = [
+            "Para el sabio, la tristeza y la alegría son semejantes, lo mismo que el bien y el mal, para el sabio, todo lo que tuvo principio debe tener también fin. Considera, por tanto, si hay razón para que te alegres con la ventura que llega, o te entristezcas con la desgracia que no esperabas.",
+            "Vive plenamente mientras puedas y no calcules el precio.",
+            "No te ilusiones con tu riqueza y tu belleza, puedes perderlas; aquella en una noche, esta en una fiebre.",
+            "A nadie pedí la vida. Me esfuerzo por aceptar, sin júbilo ni rabia, todo lo que la vida ofrece. Partiré sin preguntar al prójimo acerca de mi curiosa permanenciaen este mundo.",
+            "Entre la fe y la incredulidad, un soplo. Entre la certeza y la duda, un soplo. Alégrate en este soplo presente donde vives, pues la vida mismaestáen el soplo que pasa.",
+            "¡Qué mezquino el corazón que no sabe amar! Si no estás enamorado, ¿cómo puedes gozar con la deslumbrante luz del sol o la suave claridad de la luna?",
+            "Los sabios no podrán enseñarte nunca nada, mas la caricia de unas negras pestañas de mujer te revelará la felicidad.",
+            "Si los amantes del vino y del amor van al infierno, vacío debe estar el paraíso.",
+            "A pesar de la felicidad que tuvimos, no adoro el pasado. ¡ Es tan honda la dulzura del presente!",
+            "Lámparas que se apagan, esperanzas que se encienden: la aurora. Lámparas que se encienden, esperanzas que se apagan: la noche.",
+            "Así es como funciona: pones tu canción favorita en la alarma... y no más canción favorita…",
+          ];
+          let aleatorio = parseInt(Math.random() * frases.length);
+          document.write(frases[aleatorio]);
+        </script>
+      </div>
+      <video src="img/portada.mp4" autoplay muted loop></video>
+      <h1>MUSIC</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        fill="currentColor"
+        class="bi bi-collection-play"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1zm2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848l-4-2.5z"
+        />
+        <path
+          d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5h13z"
+        />
+      </svg>
+      <h2>Bienvenido a YourlyricsMusic!</h2>
+    </header>
+    <div class="container">
+      <h2>Elige la canción que te gusta</h2>
+      <br />
+      <section class="mb-5">
+        <div class="row">
+          <article class="col-12 col-sm-6 col-sm-3">
+            <figure>
+              <a href="img/img12.jpg" target="_blank"
+                ><img
+                  src="img/img12.jpg"
+                  alt=" foto de Guitarrista"
+                  width="260px"
+                  height="200px"
+                  title="Guitarrista y tamborilero"
+              /></a>
+            </figure>
+            <br />
+            <button type="button" class="btn btn-primary">Más info</button>
+          </article>
+          <article class="col-12 col-sm-6 col-sm-3">
+            <figure>
+              <a href="img/img10.jpg" target="_blank"
+                ><img
+                  src="img/img10.jpg"
+                  alt=" foto audencia banda"
+                  width="260px"
+                  height="200px"
+                  title="Audencia banda"
+              /></a>
+            </figure>
+            <br />
+            <button type="button" class="btn btn-primary">Más info</button>
+          </article>
+          <article class="col-12 col-sm-6 col-sm-3">
+            <figure>
+              <a href="img/img11.jpg" target="_blank"
+                ><img
+                  src="img/img11.jpg"
+                  alt="foto luz musica"
+                  width="260px"
+                  height="200px"
+                  title="Luz musica"
+              /></a>
+            </figure>
+            <br />
+            <button type="button" class="btn btn-primary">Más info</button>
+          </article>
+          <article class="col-12 col-sm-6 col-sm-3">
+            <figure>
+              <a href="img/img7.jpg" target="_blank"
+                ><img
+                  src="img/img7.jpg"
+                  alt=" foto artista musico"
+                  width="260px"
+                  height="200px"
+                  title="Artista musico"
+              /></a>
+            </figure>
+            <br />
+            <button type="button" class="btn btn-primary">Más info</button>
+          </article>
+        </div>
+      </section>
+    </div>
+    <img class="foto" src="img/img4.jpg" alt="foto de concierto" width="100%" />
+    <div class="tres">
+      <div class="row">
+        <article class="col-12 col-sm-6 col-md-4">
+          <img src="img/img1.png" alt="boton1" />
+          <h2>Escucha en segundo plano</h2>
+          <h3>
+            Olvídate de que tu música se detenga cuando bloqueas la pantalla o
+            utilizas otras aplicaciones.
+          </h3>
+        </article>
+        <article class="col-12 col-sm-6 col-md-4">
+          <img src="img/img2.png" alt="boton2" />
+          <h2>Música sin anuncios</h2>
+          <h3>Disfruta de todo un mundo de música sin anuncios.</h3>
+        </article>
+        <article class="col-12 col-sm-6 col-md-4">
+          <img src="img/img3.png" alt="boton3" />
+          <h2>Descarga y disfruta</h2>
+          <h3>
+            Escucha a tus artistas favoritos durante un vuelo, en el metro o
+            incluso cuando no tengas conexión.
+          </h3>
+        </article>
+      </div>
+    </div>
+    <section class="uno">
+      <article class="dva">
+        <h4>Cantar una canción es darle vida.</h4>
+        <h2>Las Canciones nacen de la vida, no de tocar el piano.</h2>
+        <br />
+        <figure>
+          <a href="img/img3.jpg" target="_blank"
+            ><img
+              id="mus"
+              src="img/img3.jpg"
+              alt="Guitarra"
+              width="100%"
+              title="Musico guetarra cancion"
+          /></a>
+        </figure>
+        <h3>
+          La canción habla del alma del hombre. Una canción no es solo un
+          llamado a la acción y no es una razón para bailar. La canción expresa
+          la visión personal de una persona del mundo.
+        </h3>
+      </article>
+      <article class="dva1">
+        <h4>
+          Quien posee los encantos de las Canciones, posee el alma de
+          cualquiera.
+        </h4>
+        <h2>Sin una canción no hay vida, como no hay vida sin el sol.</h2>
+        <br />
+        <figure>
+          <a href="img/img.jpg" target="_blank"
+            ><img
+              id="mus"
+              src="img/img.jpg"
+              alt="foto fans en concierto"
+              width="100%"
+              title="Fans en concierto"
+          /></a>
+        </figure>
+        <h3>
+          Las Canciones y los poemas están hechos del mismo material que las
+          almas; penetran de un mundo a otro casi sin obstáculos.
+        </h3>
+      </article>
+    </section>
+    <footer>
+      <small
+        >Todos los derechos &copy; Copiright | 2023 Yourlyrics |<a
+          class="info"
+          href="tel:+34333666999"
+          >34333666999 </a
+        ><a class="info" href="mailto:info@Yourlyrics.com"
+          >- info@Yourlyrics.com</a
+        >
+        | Aviso legal | Privacidad Carrer Vicenç Llivina, 14368</small
+      >
+    </footer>
+  </body>
 </html>
