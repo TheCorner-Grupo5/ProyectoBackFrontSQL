@@ -22,6 +22,7 @@ import backapp.demo.repositories.UserRepository;
 @RestController
 @CrossOrigin
 @RequestMapping("/api")
+
 public class UserController {
     @Autowired
     private UserRepository userRepository;

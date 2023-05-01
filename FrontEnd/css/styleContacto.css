@@ -6,7 +6,7 @@
 body{
     font-family: 'Playfair Display', serif; /*"Noto Naskh Arabic UI", Arial, sans-serif;*/
     background-color:rgb(4, 65, 71); 
-    background-image: url(img/star.png); 
+    background-image: url(../img/star.png); 
     text-align: left;
     background-size: 50px, cover ;
     background-position: 20px 10px, top;
