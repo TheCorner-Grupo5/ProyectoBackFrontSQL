@@ -21,7 +21,7 @@ public class DemoApplication implements CommandLineRunner {
 
   @Autowired
   UserRepository userRepository;
-
+  
   public static void main(String[] args) {
     SpringApplication.run(DemoApplication.class, args);
   }
@@ -32,7 +32,7 @@ public class DemoApplication implements CommandLineRunner {
     dataRepository.saveAll(Arrays.asList(
         new Data( "George", "Bluth","george.bluth@reqres.in", "https://reqres.in/img/faces/1-image.jpg"),
         new Data( "Janet", "Weaver","janet.weaver@reqres.in", "https://reqres.in/img/faces/2-image.jpg"),
-        new Data( "Emma","emma.wong@reqres.in", "Wong", "https://reqres.in/img/faces/3-image.jpg"),
+        new Data( "Emma", "Wong","emma.wong@reqres.in", "https://reqres.in/img/faces/3-image.jpg"),
         new Data( "Eve", "Holt","eve.holt@reqres.in", "https://reqres.in/img/faces/4-image.jpg"),
         new Data( "Charles", "Morris","charles.morris@reqres.in", "https://reqres.in/img/faces/5-image.jpg"),
         new Data( "Tracey", "Ramos","tracey.ramos@reqres.in", "https://reqres.in/img/faces/6-image.jpg")

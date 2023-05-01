@@ -1,6 +1,6 @@
 @font-face {
     font-family: segram;
-    src: url("img/segram.ttf");
+    src: url("../img/segram.ttf");
     }
     * {
         margin: 0;
@@ -107,7 +107,7 @@
         left: 0;
         top: 0;
         background-color: rgb(4, 65, 71);
-        background-image: url(img/star.png); 
+        background-image: url(../img/star.png); 
         text-align: left;
         background-size: 40px, cover ;
         background-position: 15px, top;
