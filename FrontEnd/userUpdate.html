@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de usuarios</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabla de usuarios</h1>
+    <table id="user-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo electrónico</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+<script>
+    fetch('http://localhost:8080/api/getUsers')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // Aquí puedes añadir código para mostrar los datos en la página web
+    })
+    .catch(error => console.error(error));
+
+</script>
+</body>
+</html>
