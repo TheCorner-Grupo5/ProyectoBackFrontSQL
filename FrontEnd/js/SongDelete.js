@@ -7,7 +7,7 @@ form.addEventListener('submit', function(event) {
 		id: form.elements.id.value,
 	};
 
-	fetch('http://localhost:8080/api/deleteSong'+'?id='+song.id, {
+	fetch('http://localhost:8080/api/deleteSong/'+'?id='+song.id, {
 		method: 'DELETE'
 	})
 	.then(response => response.json())

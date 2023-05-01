@@ -53,7 +53,7 @@ public class SongController {
         return response;
     }
 
-    @GetMapping("/songs")
+    @GetMapping("/getSongs")
     public List<Data> getAllSongs(){
         return dataRepository.findAll();
     }

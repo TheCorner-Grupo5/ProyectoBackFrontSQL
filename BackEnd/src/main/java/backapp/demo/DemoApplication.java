@@ -40,7 +40,11 @@ public class DemoApplication implements CommandLineRunner {
     );
 
     userRepository.saveAll(Arrays.asList(
-      new User("natalie", "gomez", "ngomez.cep@gmail.com", "12345678")
+      new User("natalie", "gomez", "ngomez.cep@gmail.com", "12345678"),
+      new User("Natalie", "gomez", "ngomez1.cep@gmail.com", "12345678"),
+      new User("NAtalie", "gomez", "ngomez2.cep@gmail.com", "12345678"),
+      new User("NATalie", "gomez", "ngomez3.cep@gmail.com", "12345678"),
+      new User("NATAlie", "gomez", "ngomez4.cep@gmail.com", "12345678")
       )
     );
   }
