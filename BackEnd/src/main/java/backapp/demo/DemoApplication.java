@@ -9,7 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 
 import backapp.demo.models.Data;
 import backapp.demo.models.User;
-import backapp.demo.repositories.DataRepository;
+import backapp.demo.repositories.SongRepository;
 import backapp.demo.repositories.UserRepository;
 
 
@@ -17,7 +17,7 @@ import backapp.demo.repositories.UserRepository;
 public class DemoApplication implements CommandLineRunner {
 
   @Autowired
-  DataRepository dataRepository;
+  SongRepository dataRepository;
 
   @Autowired
   UserRepository userRepository;
