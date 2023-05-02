@@ -33,7 +33,7 @@ $(document).ready(function() {
             "color": "black"
           });
           table.find('th').css({
-            "background-color": "rgba(202, 7, 7, 0.9)",
+            "background-color": "rgb(8 110 120 / 69%)",
             "color": "white",
             "text-align": "center",
             "padding": "10px"

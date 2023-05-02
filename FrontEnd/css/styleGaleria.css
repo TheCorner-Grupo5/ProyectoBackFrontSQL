@@ -13,7 +13,7 @@ img {
 body {
     font-family: 'Playfair Display', serif; /*"Noto Naskh Arabic UI", Arial, sans-serif;*/
     background-color: rgb(4, 65, 71);
-    background-image: url(img/star.png);
+    background-image: url(../img/star.png);
     text-align: left;
     background-size: 50px, cover;
     background-position: 20px 10px, top;
@@ -61,6 +61,10 @@ footer {
     padding-left: 0;
 }
 
+#start {
+    padding: 40px;
+    margin-top: 30px;
+}
 #start {
     padding: 40px;
     margin-top: 30px;
