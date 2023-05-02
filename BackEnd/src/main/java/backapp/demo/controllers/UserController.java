@@ -3,7 +3,6 @@ package backapp.demo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,59 +12,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
+import backapp.demo.interfaces.UserServiceInterface;
 import backapp.demo.models.User;
-import backapp.demo.repositories.UserRepository;
+import backapp.demo.services.UserService;
 
 
 @RestController
 @CrossOrigin
 @RequestMapping("/api")
 
-public class UserController {
+public class UserController implements UserServiceInterface {
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
 
 
     @GetMapping("/getUsers")
     public List<User> getAllUsers(){
-        return userRepository.findAll();
+        return userService.getAllUsers();
     }
 
 
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user) {
-        if (userRepository.existsByEmail(user.getEmail())) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The user already exists in the repository");
-        } else {
-            return userRepository.saveAndFlush(user);
-        }
+        return userService.addUser(user);
     }
     
     @DeleteMapping("/deleteUser")
-    public User deleteSong(@RequestParam int id) {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
-        userRepository.delete(user);
-        return user;
+    public User deleteUser(@RequestParam int id) {
+        return userService.deleteUser(id);
     }
 
     @PutMapping("/updateUser")
     public User updateUser(@RequestBody User user) {
-        User userToUpdate = userRepository.findById(user.getId())
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
-        if (user.getFirstName() != null) {
-            userToUpdate.setFirstName(user.getFirstName());
-        }
-        if (user.getLastName() != null) {
-            userToUpdate.setLastName(user.getLastName());
-        }
-        if (user.getEmail() != null) {
-            userToUpdate.setEmail(user.getEmail());
-        }
- 
-        return userRepository.save(userToUpdate);
+        return userService.updateUser(user);
     }
 
   
