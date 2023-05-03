@@ -7,12 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import backapp.demo.interfaces.UserServiceInterface;
 import backapp.demo.models.User;
 import backapp.demo.repositories.UserRepository;
 
 
 @Service
-public class UserService {
+public class UserService implements UserServiceInterface {
     @Autowired
     private UserRepository userRepository;
    
