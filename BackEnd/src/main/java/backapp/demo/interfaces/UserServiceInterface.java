@@ -13,5 +13,7 @@ public interface UserServiceInterface {
     public User deleteUser(int id);
 
     public User updateUser(User user);
+    
+    public Object[] getEmailAndPassword(String email, String Password);
 
 }

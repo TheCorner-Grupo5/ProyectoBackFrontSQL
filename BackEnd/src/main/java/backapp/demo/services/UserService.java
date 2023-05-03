@@ -3,6 +3,7 @@ package backapp.demo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -11,16 +12,14 @@ import backapp.demo.interfaces.UserServiceInterface;
 import backapp.demo.models.User;
 import backapp.demo.repositories.UserRepository;
 
-
 @Service
-public class UserService implements UserServiceInterface{
+public class UserService implements UserServiceInterface {
     @Autowired
     private UserRepository userRepository;
-   
-    public List<User> getAllUsers(){
+
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
-
 
     public User addUser(User user) {
         if (userRepository.existsByEmail(user.getEmail())) {
@@ -29,7 +28,6 @@ public class UserService implements UserServiceInterface{
             return userRepository.saveAndFlush(user);
         }
     }
-    
 
     public User deleteUser(int id) {
         User user = userRepository.findById(id)
@@ -38,10 +36,9 @@ public class UserService implements UserServiceInterface{
         return user;
     }
 
-
     public User updateUser(User user) {
         User userToUpdate = userRepository.findById(user.getId())
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
         if (user.getFirstName() != null) {
             userToUpdate.setFirstName(user.getFirstName());
         }
@@ -51,10 +48,16 @@ public class UserService implements UserServiceInterface{
         if (user.getEmail() != null) {
             userToUpdate.setEmail(user.getEmail());
         }
- 
+
         return userRepository.save(userToUpdate);
     }
 
-  
+    public Object[] getEmailAndPassword(String email, String password) {
+        Object[] credentials = userRepository.findUserCredentialsByEmailAndPassword(email, password);
+        if (credentials == null || credentials.length==0) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+        }
+        return credentials;
+    }
 
 }

@@ -10,7 +10,7 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     boolean existsByEmail(String email);
 
     @Query("SELECT u.email, u.password FROM User u WHERE u.email = :email AND u.password = :password")
-    Object[] findUserCredentialsByEmail(@Param("email") String email, @Param("password") String password);
+    Object[] findUserCredentialsByEmailAndPassword(@Param("email") String email, @Param("password") String password);
 
     
 }
