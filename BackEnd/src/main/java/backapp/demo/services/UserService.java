@@ -13,7 +13,7 @@ import backapp.demo.repositories.UserRepository;
 
 
 @Service
-public class UserService implements UserServiceInterface {
+public class UserService implements UserServiceInterface{
     @Autowired
     private UserRepository userRepository;
    
