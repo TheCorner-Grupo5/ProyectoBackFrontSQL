@@ -22,24 +22,13 @@ import backapp.demo.services.SongService;
 @CrossOrigin
 @RequestMapping("/api")
 
+
 public class SongController implements SongServiceInterface {
+
+
     @Autowired
     private SongService songService;
 
-   
-    // @GetMapping("/JSON-Songs")
-    // public ResponseEntity<Response> getJSONSongs() {
-    //     HttpHeaders headers = new HttpHeaders();
-    //     headers.add("Access-Control-Allow-Origin", "*"); 
-
-    //     Response response = new Response(1, 6, 12, 2);
-    //     Support support = new Support("https://reqres.in/#support-heading", 
-    //     "To keep ReqRes free, contributions towards server costs are appreciated!");
-    //     response.setSupport(support);
-    //     response.setData(dataRepository.findAll());
-
-    //     return new ResponseEntity<>(response, headers, HttpStatus.OK);
-    // }
 
     @GetMapping("/JSON-Songs")
     public Response getJSONSongs() {
