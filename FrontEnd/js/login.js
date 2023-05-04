@@ -19,21 +19,15 @@ loginForm.addEventListener("submit", function (event) {
       },
     }
   )
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Server response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
+  .then(response => response.json())
+	.then(data => {
+		console.log('Success:', data);
     	
-		
-      if (data.password === user.password && data.email === user.email) {
+      if (data[0][0] == user.email && data[0][1] == user.password) {
         console.log("Valido");
-        window.location.href = "../index.html";
+        window.location.href = "indexLogin.html";
       } else {
         console.log("NO");
-	
       }
     })
     .catch((error) => {
