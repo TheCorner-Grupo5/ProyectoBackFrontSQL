@@ -21,22 +21,24 @@
 			<div class="formular">
 				<h2>Delete User</h2>
 				<form id="user-form" class="row g-3">
-					<div class="col-12">
-						<label for="id" class="form-label">id<em>*</em> </label>
-						<input type="text" class="form-control" name="id" required>
+				  <div class="col-12">
+					<label for="id" class="form-label">Select ID<em>*</em> </label>
+					<select id="id" class="form-select" name="id" required>
+					  <option selected disabled value="">Choose...</option>
+					</select>
+				  </div>
+				  <div class="col-12">
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" id="gridCheck" required>
+					  <label class="form-check-label" for="gridCheck">Check me out (obligatorio)<em>*</em>
+					  </label>
 					</div>
-					<div class="col-12">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="gridCheck" required>
-							<label class="form-check-label" for="gridCheck">Check me out (obligatorio)<em>*</em>
-							</label>
-						</div>
-					</div>
-					<div class="col-12">
-						<button id="submit-button" type="submit" class="btn btn-primary">Enviar</button>
-					</div>
+				  </div>
+				  <div class="col-12">
+					<button id="submit-button" type="submit" class="btn btn-primary">Enviar</button>
+				  </div>
 				</form>				
-			</div>
+			  </div>			  
 		</div>
 	</header>
 	<div id="table-container"></div>
@@ -50,6 +52,7 @@
 <script defer src="../js/UserGet.js"></script>
 <script defer src="../js/UserDelete.js"></script>
 
+<script defer src="../js/UserId.js"></script>
 
 </body>
 </html>
