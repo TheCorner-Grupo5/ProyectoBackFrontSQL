@@ -8,6 +8,7 @@ $(document).ready(function() {
             .append($("<th>").text("First Name"))
             .append($("<th>").text("Last Name"))
             .append($("<th>").text("Email"))
+            .append($("<th>").text("User Types"))
           )).append($("<tbody>"));
         
           for (var i = 0; i < data.length; i++) {
@@ -15,7 +16,8 @@ $(document).ready(function() {
               .append($("<td>").text(data[i].id))
               .append($("<td>").text(data[i].firstName))
               .append($("<td>").text(data[i].lastName))
-              .append($("<td>").text(data[i].email));
+              .append($("<td>").text(data[i].email))
+              .append($("<td>").text(data[i].userTypes));
             table.append(row);
           }
         

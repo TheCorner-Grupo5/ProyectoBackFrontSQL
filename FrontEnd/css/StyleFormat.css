@@ -13,14 +13,16 @@ body{
     background-position: 20px 10px, top;
     background-repeat: no-repeat;
 }
-h2{
+h2,h1 {
     font-weight: 500;
     font-size: 40px;
-    border-bottom: 1px solid white;
-    width: 330px;
+    width: max-content;
     margin: auto;
-    padding: 10px;
-}
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    color: white;
+  }
 h2 {
     text-decoration: none;
     color:white;
@@ -120,4 +122,13 @@ footer{
 }
 .mapa{
 	margin-top:170px;
+}
+
+.header-container {
+    text-align: center;
+}
+header ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
