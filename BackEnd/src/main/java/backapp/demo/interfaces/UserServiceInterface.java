@@ -14,6 +14,8 @@ public interface UserServiceInterface {
 
     public User updateUser(User user);
     
-    public Object[] getEmailAndPassword(String email, String Password);
+    public User getUserByEmailAndPassword(String email, String Password);
+
+    
 
 }

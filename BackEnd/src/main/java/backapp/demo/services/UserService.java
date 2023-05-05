@@ -51,9 +51,9 @@ public class UserService implements UserServiceInterface {
         return userRepository.save(userToUpdate);
     }
 
-    public Object[] getEmailAndPassword(String email, String password) {
-        Object[] credentials = userRepository.findUserCredentialsByEmailAndPassword(email, password);
-        if (credentials == null || credentials.length==0) {
+    public User getUserByEmailAndPassword(String email, String password) {
+        User credentials = userRepository.findByEmailAndPassword(email, password);
+        if (credentials == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
         }
         return credentials;
