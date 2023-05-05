@@ -50,8 +50,8 @@ public class UserController implements UserServiceInterface {
 
 
     @GetMapping("/login")
-    public Object[] getEmailAndPassword(@RequestParam String email, @RequestParam String password) {
-        return userService.getEmailAndPassword(email, password);
+    public User getUserByEmailAndPassword(@RequestParam String email, @RequestParam String password) {
+        return userService.getUserByEmailAndPassword(email, password);
     }
 
 }

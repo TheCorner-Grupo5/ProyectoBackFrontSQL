@@ -23,7 +23,7 @@ loginForm.addEventListener("submit", function (event) {
 	.then(data => {
 		console.log('Success:', data);
     	
-      if (data[0][0] == user.email && data[0][1] == user.password) {
+      if (data.email == user.email && data.password == user.password) {
         console.log("Valido");
         window.location.href = "indexLogin.html";
       } else {
