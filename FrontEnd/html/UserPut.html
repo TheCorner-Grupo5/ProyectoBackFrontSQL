@@ -23,8 +23,10 @@
 			<h2>Update User</h2>
 			<form id="user-form" class="row g-3">
 				<div class="col-md-2">
-					<label for="id" class="form-label">id<em>*</em> </label>
-					<input type="text" class="form-control" name="id" required>
+					<label for="id" class="form-label">Select ID<em>*</em> </label>
+					<select id="id" class="form-select" name="id" required>
+					  <option selected disabled value="">Choose...</option>
+					</select>
 				</div>
 				<div class="col-md-5">
 					<label for="firstName" class="form-label">Nombre<em>*</em> </label>
@@ -52,9 +54,7 @@
 				<div class="col-12">
 					<button id="submit-button" type="submit" class="btn btn-primary">Enviar</button>
 				</div>
-			</form>
-			
-							
+			</form>				
 		</div>
 
 </div>
@@ -76,6 +76,7 @@
 <script defer src="../js/UserGet.js"></script>
 <script defer src="../js/UserPut.js"></script>
 
+<script defer src="../js/UserId.js"></script>
 
 </body>
 </html>
