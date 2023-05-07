@@ -26,11 +26,7 @@ loginForm.addEventListener("submit", function (event) {
       if (data.email == user.email && data.password == user.password) {
         console.log("Valido");
 
-        if(data.userTypes == "ADMINISTRATOR"){
-          window.location.href = "AdminDashboard.html";
-        }else{
-          window.location.href = "indexLogin.html";
-        }
+       
 
       } else {
         console.log("NO");
