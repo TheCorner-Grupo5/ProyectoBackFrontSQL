@@ -25,7 +25,15 @@ loginForm.addEventListener("submit", function (event) {
     	
       if (data.email == user.email && data.password == user.password) {
         console.log("Valido");
-        window.location.href = "indexLogin.html";
+        
+        if (data.role.administrator == true && data.role.regularUser == true) {
+          window.location.href = "AdminUserDashboard.html";
+        } else if (data.role.administrator == true && data.role.regularUser == false) {
+          window.location.href = "AdminDashboard.html";
+        } else if (data.role.administrator == false && data.role.regularUser == true) {
+          window.location.href = "UserDashboard.html";
+        }
+
       } else {
         console.log("NO");
       }

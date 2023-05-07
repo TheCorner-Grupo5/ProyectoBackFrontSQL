@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.CommandLineRunner;
 
+import backapp.demo.enums.UserType;
 import backapp.demo.models.Data;
 import backapp.demo.models.User;
 import backapp.demo.repositories.SongRepository;
@@ -40,13 +41,15 @@ public class DemoApplication implements CommandLineRunner {
     );
 
     userRepository.saveAll(Arrays.asList(
-      new User("natalie", "gomez", "ngomez.cep@gmail.com", "12345678"),
-      new User("Natalie", "gomez", "ngomez1.cep@gmail.com", "12345678"),
-      new User("NAtalie", "gomez", "ngomez2.cep@gmail.com", "12345678"),
-      new User("NATalie", "gomez", "ngomez3.cep@gmail.com", "12345678"),
-      new User("NATAlie", "gomez", "ngomez4.cep@gmail.com", "12345678")
+      new User("natalie", "gomez", "ngomez.cep@gmail.com", "12345678", UserType.ADMINISTRATOR),
+      new User("Natalie", "gomez", "ngomez1.cep@gmail.com", "12345678", UserType.REGULAR_USER),
+      new User("NAtalie", "gomez", "ngomez2.cep@gmail.com", "12345678", UserType.REGULAR_USER),
+      new User("NATalie", "gomez", "ngomez3.cep@gmail.com", "12345678", UserType.REGULAR_USER),
+      new User("NATAlie", "gomez", "ngomez4.cep@gmail.com", "12345678", UserType.REGULAR_USER)
       )
     );
+
+
   }
  
 }
