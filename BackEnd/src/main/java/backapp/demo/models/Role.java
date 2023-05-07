@@ -20,8 +20,14 @@ public class Role {
             case REGULAR_USER:
                 this.isRegularUser = true;
                 break;
+            case NOT_REGULAR_USER:
+                this.isRegularUser = false;
+                break;
             case ADMINISTRATOR:
                 this.isAdministrator = true;
+                break;
+            case NOT_ADMINISTRATOR:
+                this.isAdministrator = false;
                 break;
         }
 
