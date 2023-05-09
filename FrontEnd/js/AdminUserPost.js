@@ -9,7 +9,7 @@ form.addEventListener('submit', function(event) {
 		email: form.elements.email.value,
 		email: form.elements.email.value,
 		password: form.elements.password.value,
-		role: {regularUser: true}
+		role: {administrator: true}
 	};
 
 	fetch('http://localhost:8080/api/addUser', {

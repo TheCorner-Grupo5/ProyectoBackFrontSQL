@@ -34,7 +34,6 @@ public class User {
     this.email=email;
     this.password=password;
     role.setUserType(userType);
-    
   }
 
 
