@@ -26,11 +26,21 @@ loginForm.addEventListener("submit", function (event) {
       if (data.email == user.email && data.password == user.password) {
         console.log("Valido");
         
+        
         if (data.role.administrator == true && data.role.regularUser == true) {
+          // Almacenar información de inicio de sesión en LocalStorage
+          localStorage.setItem("loggedIn", "true");
+          localStorage.setItem("userRole", "adminUser");
           window.location.href = "AdminUserDashboard.html";
         } else if (data.role.administrator == true && data.role.regularUser == false) {
+          // Almacenar información de inicio de sesión en LocalStorage
+          localStorage.setItem("loggedIn", "true");
+          localStorage.setItem("userRole", "admin");
           window.location.href = "AdminDashboard.html";
         } else if (data.role.administrator == false && data.role.regularUser == true) {
+          // Almacenar información de inicio de sesión en LocalStorage
+          localStorage.setItem("loggedIn", "true");
+          localStorage.setItem("userRole", "user");
           window.location.href = "UserDashboard.html";
         }
 
