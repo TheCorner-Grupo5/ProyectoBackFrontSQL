@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Embeddable
 public class Role {
-    private boolean isRegularUser=false;
+    private boolean isRegularUser=true;
     private boolean isAdministrator=false;
    
 
